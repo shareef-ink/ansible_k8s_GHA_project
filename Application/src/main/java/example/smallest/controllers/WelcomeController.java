@@ -30,7 +30,7 @@ public class WelcomeController {
             + "</head>"
             + "<body>"
             + "<div class='card'>"
-            + "<h1>🎉 Congratulationssssssssssssss DevOps Engineers!! 🎉</h1>"
+            + "<h1>🎉 Congratulations DevOps Engineers!! 🎉</h1>"
             + "<p>You have <span class='highlight'>successfully deployed your application on Kubernetes ☸️</span><br>"
             + "using an <span class='highlight'>Ansible Playbook 🛠️</span><br>"
             + "automated via <span class='highlight'>GitHub Actions ⚙️🚀</span></p>"
