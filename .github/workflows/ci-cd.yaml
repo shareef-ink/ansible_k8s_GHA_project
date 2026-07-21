@@ -94,8 +94,16 @@ jobs:
           sed -i "s|k8s_ansible:.*|k8s_ansible:${{ github.run_number }}|g" Ansible/k8s_deployment.yaml
 
           git add Ansible/k8s_deployment.yaml
+
+          if git diff --cached --quiet; then
+           echo "No changes detected, skipping commit"
+          else
           git commit -m "Update deployment image tag to version ${{ github.run_number }} [skip ci]"
-          git push
+          git push origin main
+          fi
+          
+      #  git commit -m "Update deployment image tag to version ${{ github.run_number }} [skip ci]"
+      #    git push
 
       # === Deploy to K8s using Ansible ===
       - name: Set up Ansible
